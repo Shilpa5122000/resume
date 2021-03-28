@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Sample</title>
+<script>
+function validateForm()
+{
+ var fn = document.myform.FN.value;
+ var ln = document.myform.LN.value;
+ var pw = document.myform.password.value;
+if(fn == null || fn == "")
+{
+alert("Enter valide first name");
+return false;
+}
+else if(ln == null || ln == "")
+{
+alert("Enter valide last name");
+return false;
+}
+else if(pw.length<6)
+{  
+alert("Enter a longer password!");
+return false;  
+}
+}
+ function submit()
+{
+               alert("Submitted Successfully!");
+            }
+function over()
+{
+               alert ("Mouse Over done!");
+            }
+
+function out()
+{
+               alert ("Mouse moved out!");
+            }
+function drag()
+{
+alert("Dragged succesfully!");
+}
+           
+</script>
+</head>
+<body style="font-size: larger; text-align: center; background-color: rgb(195, 199, 228); " >
+
+<h2><u>REGISTRATION FORM</u><h2>
+<h5>Welcome to Login</h5>
+<form name="myform" onsubmit="return validateForm()" method="post">
+<div id="1">
+<label for="FN">First Name: </label>
+<input type="text" name="FN">
+</div>
+<div>
+<label for="email">E-mail ID: </label>
+<input type="email" name="email" placeholder="xyz@gmail.com">
+<label for="password">Password: </label>
+<input type="password" name="password">
+</div>
+<hr>
+<div>
+<input type="checkbox" name="agree" required>
+<label for="agree">I agree to all the terms and conditions</label>  
+</div>
+<div onundo="undo()">
+</div>
+<button name="Submit">Submit</button>
+</div>
+</form>
+<h2><u>ONCLICK</u></h2>
+    <input type = "button" onclick = "submit()" value = "Click!">
+<hr>
+<h2><u>ONMOUSEOVER</u></h2>
+<h4>Bring your mouse on "over" to see!</h4>      
+      <div onmouseover = "over()">
+         <h3> OVER </h3>
+      </div>
+<hr>  
+<h2><u>ONDRAGOVER</u></h2>
+<h4>Drag your mouse on "drag" to see!</h4>
+<div ondragover = "drag()">
+<h3> DRAG </h3>
+</div>
+
+<hr>  
+<h2><u>ONMOUSEOUT</u></h2>
+<h4>Get your mouse out!</h4>
+<div onmouseout = "out()">
+<h3> OUT </h3>
+</div>
+</body>
+</html>
